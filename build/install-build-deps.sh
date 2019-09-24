@@ -83,9 +83,10 @@ install_dep_from_tarfile $MARKUPSAFE_SRC_URL 'markupsafe'
 # Download and extract Cython.
 mkdir -p $THIRD_PARTY_DIR/cython
 cd $THIRD_PARTY_DIR/cython
-curl --remote-name http://cython.org/release/Cython-0.20.2.zip
-unzip Cython-0.20.2.zip
-rm -rf Cython-0.20.2.zip
+curl --remote-name https://files.pythonhosted.org/packages/98/4a/eb57896c70a3cb6c8888bc942df455d96e361065db33a611fab943554219/Cython-0.20.2.tar.gz
+gzip -d Cython-0.20.2.tar.gz
+tar xvf Cython-0.20.2.tar
+rm -rf Cython-0.20.2.tar
 mv Cython-0.20.2 src
 
 # Install the Mojo shell
